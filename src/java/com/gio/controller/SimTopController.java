@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.gio.controller;
 
@@ -10,12 +11,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.UriInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 /**
  *
- * @author arsenio
+ * @author danieldwomor
  */
 @Path("simtops")
 @Consumes(value = {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -23,6 +24,8 @@ import org.apache.logging.log4j.Logger;
 public class SimTopController {
 
     @Context
+    private UriInfo uriInfo;
+    
     private static final Logger LOG = LogManager.getLogger(SimTopController.class);
 
     @GET
